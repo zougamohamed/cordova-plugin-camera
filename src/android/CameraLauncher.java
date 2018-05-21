@@ -634,7 +634,7 @@ public class CameraLauncher extends CordovaPlugin implements MediaScannerConnect
         // Get filename from uri
         String fileName = realPath != null ?
                 realPath.substring(realPath.lastIndexOf('/') + 1) :
-                "modified." + (this.encodingType == JPEG ? "jpg" : "png");
+                "modified_" + System.currentTimeMillis() + "." + (this.encodingType == JPEG ? "jpg" : "png");
 
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         //String fileName = "IMG_" + timeStamp + (this.encodingType == JPEG ? ".jpg" : ".png");
